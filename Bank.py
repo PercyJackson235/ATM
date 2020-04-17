@@ -7,13 +7,13 @@ class Bank:
     def __init__(self, balance=1000):
         self.balance = Decimal(str(balance)+'.00')
         self.run = True
-    def checkbalance(self):
+    def check_balance(self):
         print(f'Bank balance is : ${self.balance}')
         sleep(1)
     def deposit(self):
         amount = self.get_num()
         self.balance += amount
-        self.checkbalance()
+        self.check_balance()
     def withdraw(self):
         while True:
             amount = self.get_num()
@@ -24,7 +24,7 @@ class Bank:
             else:
                 break
         self.balance -= amount
-        self.checkbalance()
+        self.check_balance()
     def menu(self):
         menu1 = 'Would you like to : '
         menu2 = '1 - add or deposit'
@@ -69,7 +69,7 @@ def main():
         elif action in [ '2', 'subtract', 'sub', 'withdraw', 'w']:
             bank.withdraw()
         elif action in [ '3', 'check balance', 'check', 'balance', 'b', 'bal']:
-            bank.checkbalance()
+            bank.check_balance()
         elif action in [ '4', 'quit', 'shutdown', 'q', 'exit']:
             bank.shutdown()
             continue
