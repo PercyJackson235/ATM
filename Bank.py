@@ -1,5 +1,3 @@
-#-*-coding:utf8;-*-
-#qpy:console
 from time import sleep
 from decimal import Decimal
 
